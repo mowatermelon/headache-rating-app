@@ -1,0 +1,102 @@
+/* 移动设备优化样式 */
+@media (max-width: 640px) {
+  /* 导航栏优化 */
+  .navbar-mobile-menu {
+    width: 100%;
+  }
+  
+  /* 卡片布局优化 */
+  .card-grid-mobile {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 表单元素优化 */
+  .input-field-mobile {
+    font-size: 16px; /* 防止iOS上自动缩放 */
+  }
+  
+  /* 按钮尺寸优化 */
+  .btn-mobile {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* 间距优化 */
+  .mobile-spacing {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* 文字大小优化 */
+  .mobile-text-adjust {
+    font-size: 90%;
+  }
+}
+
+/* 平板设备优化样式 */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* 卡片布局优化 */
+  .card-grid-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* 间距优化 */
+  .tablet-spacing {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* 触摸设备交互优化 */
+@media (hover: none) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .touch-padding {
+    padding: 0.75rem;
+  }
+}
+
+/* 深色模式优化 */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-image {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  .print-only {
+    display: block;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+}
+
+/* 高对比度模式优化 */
+@media (prefers-contrast: high) {
+  .high-contrast-adjust {
+    border: 1px solid #000;
+  }
+}
+
+/* 减少动画 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
